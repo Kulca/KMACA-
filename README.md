@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# KMACA — Model Portfolio Platform
+
+A mobile-friendly webapp for models to upload their pictures as part of their profiles and portfolios.
+
+## Features
+
+- **Profile & Portfolio** — Simple sign-on, easy profile setup, photo uploads with categories
+- **Model Categories** — Teens, Fitness, Runway, Fashion, Plus Size, Editorial, Commercial, Glamour, Alternative, Parts, Mature
+- **NSFW Section** — Age-verified section for explicit content with blurred previews
+- **Photographers** — Dedicated section for photographers to showcase work
+- **Agencies & Schools** — Browse and connect with modelling agencies and schools
+- **Contests** — Daily, weekly, and monthly competitions (Model of the Week, Best Portfolio, etc.)
+- **Recruitment** — Matching models, agencies, and photographers by location and category
+- **Events** — Notice board for events with RSVP and sharing
+- **Social Sharing** — Share profiles to Twitter/X, Facebook, WhatsApp, LinkedIn, Telegram, Email
+- **Admin Panel** — Full CRUD admin panel for managing users, images, contests, events, and recruitment posts
+
+## Tech Stack
+
+- **Next.js 16** (App Router)
+- **TypeScript**
+- **Tailwind CSS 4**
+- **Lucide React** (icons)
+- **localStorage** for demo data persistence
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Demo Accounts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The app comes pre-loaded with sample data. To access the admin panel:
+1. Sign in with email: `admin@kmaca.com`
+2. Click the shield icon in the top bar
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+src/
+├── app/
+│   ├── admin/       — CRUD admin panel
+│   ├── agencies/    — Agencies & schools listing
+│   ├── auth/        — Sign up / sign in flow
+│   ├── contests/    — Daily/weekly/monthly contests
+│   ├── events/      — Event notice board
+│   ├── explore/     — Browse all portfolio images
+│   ├── nsfw/        — Age-verified NSFW section
+│   ├── photographers/ — Photographer listing
+│   ├── profile/     — User profile & portfolio
+│   └── recruit/     — Recruitment matching board
+├── components/      — Shared UI components
+└── lib/             — Types, data store, utilities
+```
